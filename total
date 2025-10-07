@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Danilo Pereira</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+      scroll-behavior: smooth;
+    }
+
+    /* ===== MENU ===== */
+    nav {
+      background: #0a0f1f;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    .menu-links {
+      display: flex;
+      gap: 15px;
+    }
+
+    .menu-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .menu-links a:hover {
+      color: #66a3ff;
+    }
+
+    /* ===== MENU MOBILE ===== */
+    .menu-btn {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-btn span {
+      background: white;
+      height: 3px;
+      width: 25px;
+      margin: 3px 0;
+      border-radius: 2px;
+    }
+
+    @media (max-width: 700px) {
+      .menu-links {
+        display: none;
+        flex-direction: column;
+        background: #0a0f1f;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+      }
+
+      .menu-links.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: flex;
+      }
+    }
+
+    /* ===== CABEÇALHO ===== */
+    header {
+      background-image: url('capa.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 1.8em;
+      font-weight: bold;
+      text-shadow: 0 0 10px rgba(0,0,0,0.6);
+      margin-top: 50px;
+    }
+
+    /* ===== CONTEÚDO ===== */
+    main {
+      padding: 40px 20px;
+    }
+
+    h2 {
+      color: #0a0f1f;
+    }
+
+    p {
+      max-width: 700px;
+      margin: 10px auto 30px;
+      font-size: 1.1em;
+      color: #333;
+    }
+
+    /* ===== BOTÃO ===== */
+    .botao {
+      display: inline-block;
+      padding: 12px 25px;
+      background: linear-gradient(90deg, #0a0f1f, #173366);
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .botao::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: rgba(255,255,255,0.3);
+      transition: all 0.4s ease;
+    }
+
+    .botao:hover::after {
+      left: 100%;
+    }
+
+    .botao:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(23,51,102,0.6);
+    }
+
+    /* ===== BOTÃO WHATSAPP ===== */
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #0a0f1f;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      transition: 0.3s;
+    }
+
+    .whatsapp:hover {
+      transform: scale(1.1);
+      background: #173366;
+    }
+
+    .whatsapp::after {
+      content: 'Fale comigo no WhatsApp';
+      position: absolute;
+      right: 70px;
+      background: #0a0f1f;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 6px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+      font-size: 0.9em;
+      white-space: nowrap;
+    }
+
+    .whatsapp:hover::after {
+      opacity: 1;
+    }
+
+    /* ===== RODAPÉ ===== */
+    footer {
+      background: #0a0f1f;
+      color: #fff;
+      padding: 15px;
+      font-size: 0.9em;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== MENU ===== -->
+  <nav>
+    <div class="logo">Danilo Pereira</div>
+    <div class="menu-links" id="menuLinks">
+      <a href="#sobre">Sobre mim</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato">Contato</a>
+    </div>
+    <div class="menu-btn" id="menuBtn">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- ===== CAPA ===== -->
+  <header>
+    Danilo Pereira – Do gesso à programação, construindo o futuro
+  </header>
+
+  <!-- ===== CONTEÚDO ===== -->
+  <main>
+    <section id="sobre">
+      <h2>Sobre mim</h2>
+      <p>Sou um profissional do ramo de gesso que está explorando o mundo da programação. Curioso, dedicado e sempre em busca de aprender mais.</p>
+    </section>
+
+    <a href="#projetos" class="botao">Ver meus projetos</a>
+
+    <section id="projetos">
+      <h2>Projetos</h2>
+      <p>Em breve, você verá aqui meus primeiros projetos e experiências com código!</p>
+    </section>
+
+    <section id="contato">
+      <h2>Contato</h2>
+      <p>Quer trocar uma ideia ou saber mais sobre meus projetos? Em breve colocarei aqui minhas formas de contato.</p>
+    </section>
+  </main>
+
+  <!-- ===== BOTÃO WHATSAPP ===== -->
+  <a href="https://wa.me/5581979050517" target="_blank" class="whatsapp">💬</a>
+
+  <!-- ===== RODAPÉ ===== -->
+  <footer>
+    © 2025 - Feito com dedicação por Danilo Pereira
+  </footer>
+
+  <!-- ===== SCRIPT MENU MOBILE ===== -->
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const menuLinks = document.getElementById('menuLinks');
+    menuBtn.addEventListener('click', () => {
+      menuLinks.classList.toggle('active');
+    });
+  </script>
+
+</body>
