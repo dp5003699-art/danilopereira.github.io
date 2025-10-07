@@ -1,0 +1,62 @@
+index.html<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danilo Pereira - Portfólio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to bottom right, #1e1e2f, #3a3a5a);
+            color: white;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #00ffff;
+        }
+        h2 {
+            font-weight: 400;
+            color: #bbbbff;
+            margin-bottom: 30px;
+        }
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #00ffff;
+            margin-bottom: 20px;
+        }
+        a {
+            color: #00ffff;
+            text-decoration: none;
+            border: 1px solid #00ffff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        a:hover {
+            background-color: #00ffff;
+            color: #1e1e2f;
+        }
+        footer {
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://avatars.githubusercontent.com/u/160000000?v=4" alt="Foto de perfil">
+    <h1>Danilo Pereira</h1>
+    <h2>Gesseiro e futuro programador 💻</h2>
+    <a href="https://github.com/dp5003699-arte" target="_blank">Ver meu GitHub</a>
+    <footer>© 2025 Danilo Pereira - Feito com 💙 e dedicação</footer>
+</body>
+</html>
