@@ -1,0 +1,53 @@
+index.html<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Danilo Pereira</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+    }
+
+    header {
+      background-image: url('capa.jpg'); /* troque o nome se a imagem tiver outro nome */
+      background-size: cover;
+      background-position: center;
+      height: 250px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    footer {
+      background: #222;
+      color: #fff;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Bem-vindo ao site de Danilo Pereira!
+  </header>
+
+  <main>
+    <h2>Meu portfólio e projetos</h2>
+    <p>Trabalho com gesso e estudo programação nas horas vagas.</p>
+  </main>
+
+  <footer>
+    © 2025 - Feito com dedicação por Danilo Pereira
+  </footer>
+</body>
+</html>
